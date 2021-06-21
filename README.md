@@ -22,7 +22,7 @@ To install the bindings via [Composer](https://getcomposer.org/), add the follow
     }
   ],
   "require": {
-    "Neoweb/optima-bridge-api-client-php": "*@dev"
+    "neoweb/optima-bridge-api-client-php": "*@dev"
   }
 }
 ```
