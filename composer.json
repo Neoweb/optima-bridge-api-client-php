@@ -30,9 +30,9 @@
         "friendsofphp/php-cs-fixer": "^2.12"
     },
     "autoload": {
-        "psr-4": { "OptimaBridge\\Client\\" : "lib/" }
+        "psr-4": { "OptimaBridge\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "OptimaBridge\\Client\\Test\\" : "test/" }
+        "psr-4": { "OptimaBridge\\Test\\" : "test/" }
     }
 }
