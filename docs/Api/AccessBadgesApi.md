@@ -1,4 +1,4 @@
-# OptimaBridge\Client\AccessBadgesApi
+# OptimaBridge\AccessBadgesApi
 
 All URIs are relative to http://localhost:8080.
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 ## `deleteAccessBadges()`
 
 ```php
-deleteAccessBadges($access_badge): \OptimaBridge\Client\Model\Process
+deleteAccessBadges($access_badge): \OptimaBridge\Model\Process
 ```
 
 Disallow some allowed access badges on Optima-Box
@@ -26,12 +26,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OptimaBridge\Client\Api\AccessBadgesApi(
+$apiInstance = new OptimaBridge\Api\AccessBadgesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$access_badge = array(new \OptimaBridge\Client\Model\AccessBadge()); // \OptimaBridge\Client\Model\AccessBadge[] | Access badge objects that must be disallowed on Optima-Box
+$access_badge = array(new \OptimaBridge\Model\AccessBadge()); // \OptimaBridge\Model\AccessBadge[] | Access badge objects that must be disallowed on Optima-Box
 
 try {
     $result = $apiInstance->deleteAccessBadges($access_badge);
@@ -45,11 +45,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **access_badge** | [**\OptimaBridge\Client\Model\AccessBadge[]**](../Model/AccessBadge.md)| Access badge objects that must be disallowed on Optima-Box |
+ **access_badge** | [**\OptimaBridge\Model\AccessBadge[]**](../Model/AccessBadge.md)| Access badge objects that must be disallowed on Optima-Box |
 
 ### Return type
 
-[**\OptimaBridge\Client\Model\Process**](../Model/Process.md)
+[**\OptimaBridge\Model\Process**](../Model/Process.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ No authorization required
 ## `patchAccessBadges()`
 
 ```php
-patchAccessBadges($access_badge): \OptimaBridge\Client\Model\Process
+patchAccessBadges($access_badge): \OptimaBridge\Model\Process
 ```
 
 Update some allowed access badges on Optima-Box
@@ -80,12 +80,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OptimaBridge\Client\Api\AccessBadgesApi(
+$apiInstance = new OptimaBridge\Api\AccessBadgesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$access_badge = array(new \OptimaBridge\Client\Model\AccessBadge()); // \OptimaBridge\Client\Model\AccessBadge[] | Access badge objects that must be updated on Optima-Box
+$access_badge = array(new \OptimaBridge\Model\AccessBadge()); // \OptimaBridge\Model\AccessBadge[] | Access badge objects that must be updated on Optima-Box
 
 try {
     $result = $apiInstance->patchAccessBadges($access_badge);
@@ -99,11 +99,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **access_badge** | [**\OptimaBridge\Client\Model\AccessBadge[]**](../Model/AccessBadge.md)| Access badge objects that must be updated on Optima-Box |
+ **access_badge** | [**\OptimaBridge\Model\AccessBadge[]**](../Model/AccessBadge.md)| Access badge objects that must be updated on Optima-Box |
 
 ### Return type
 
-[**\OptimaBridge\Client\Model\Process**](../Model/Process.md)
+[**\OptimaBridge\Model\Process**](../Model/Process.md)
 
 ### Authorization
 
@@ -121,7 +121,7 @@ No authorization required
 ## `postAccessBadges()`
 
 ```php
-postAccessBadges($access_badge): \OptimaBridge\Client\Model\Process
+postAccessBadges($access_badge): \OptimaBridge\Model\Process
 ```
 
 Allow some new access badges on Optima-Box
@@ -134,12 +134,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OptimaBridge\Client\Api\AccessBadgesApi(
+$apiInstance = new OptimaBridge\Api\AccessBadgesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$access_badge = array(new \OptimaBridge\Client\Model\AccessBadge()); // \OptimaBridge\Client\Model\AccessBadge[] | Access badge objects that need to be allowed on Optima-Box
+$access_badge = array(new \OptimaBridge\Model\AccessBadge()); // \OptimaBridge\Model\AccessBadge[] | Access badge objects that need to be allowed on Optima-Box
 
 try {
     $result = $apiInstance->postAccessBadges($access_badge);
@@ -153,11 +153,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **access_badge** | [**\OptimaBridge\Client\Model\AccessBadge[]**](../Model/AccessBadge.md)| Access badge objects that need to be allowed on Optima-Box |
+ **access_badge** | [**\OptimaBridge\Model\AccessBadge[]**](../Model/AccessBadge.md)| Access badge objects that need to be allowed on Optima-Box |
 
 ### Return type
 
-[**\OptimaBridge\Client\Model\Process**](../Model/Process.md)
+[**\OptimaBridge\Model\Process**](../Model/Process.md)
 
 ### Authorization
 
@@ -175,7 +175,7 @@ No authorization required
 ## `putAccessBadges()`
 
 ```php
-putAccessBadges($access_badge): \OptimaBridge\Client\Model\Process
+putAccessBadges($access_badge): \OptimaBridge\Model\Process
 ```
 
 Update some allowed access badges on Optima-Box
@@ -188,12 +188,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OptimaBridge\Client\Api\AccessBadgesApi(
+$apiInstance = new OptimaBridge\Api\AccessBadgesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$access_badge = array(new \OptimaBridge\Client\Model\AccessBadge()); // \OptimaBridge\Client\Model\AccessBadge[] | Access badge objects that must be updated on Optima-Box
+$access_badge = array(new \OptimaBridge\Model\AccessBadge()); // \OptimaBridge\Model\AccessBadge[] | Access badge objects that must be updated on Optima-Box
 
 try {
     $result = $apiInstance->putAccessBadges($access_badge);
@@ -207,11 +207,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **access_badge** | [**\OptimaBridge\Client\Model\AccessBadge[]**](../Model/AccessBadge.md)| Access badge objects that must be updated on Optima-Box |
+ **access_badge** | [**\OptimaBridge\Model\AccessBadge[]**](../Model/AccessBadge.md)| Access badge objects that must be updated on Optima-Box |
 
 ### Return type
 
-[**\OptimaBridge\Client\Model\Process**](../Model/Process.md)
+[**\OptimaBridge\Model\Process**](../Model/Process.md)
 
 ### Authorization
 

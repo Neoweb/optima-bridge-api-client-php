@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  OptimaBridge\Client
+ * @package  OptimaBridge
  * @author   Quentin GUERIN (quentin.guerin@neoweb.fr)
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace OptimaBridge\Client\Model;
+namespace OptimaBridge\Model;
 
 use \ArrayAccess;
-use \OptimaBridge\Client\ObjectSerializer;
+use \OptimaBridge\ObjectSerializer;
 
 /**
  * Owner Class Doc Comment
  *
  * @category Class
- * @package  OptimaBridge\Client
+ * @package  OptimaBridge
  * @author   Quentin GUERIN (quentin.guerin@neoweb.fr)
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -60,8 +60,8 @@ class Owner implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'company' => '\OptimaBridge\Client\Model\Company',
-        'person' => '\OptimaBridge\Client\Model\Person'
+        'company' => '\OptimaBridge\Model\Company',
+        'person' => '\OptimaBridge\Model\Person'
     ];
 
     /**
@@ -215,7 +215,7 @@ class Owner implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets company
      *
-     * @return \OptimaBridge\Client\Model\Company|null
+     * @return \OptimaBridge\Model\Company|null
      */
     public function getCompany()
     {
@@ -225,7 +225,7 @@ class Owner implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets company
      *
-     * @param \OptimaBridge\Client\Model\Company|null $company company
+     * @param \OptimaBridge\Model\Company|null $company company
      *
      * @return self
      */
@@ -239,7 +239,7 @@ class Owner implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets person
      *
-     * @return \OptimaBridge\Client\Model\Person|null
+     * @return \OptimaBridge\Model\Person|null
      */
     public function getPerson()
     {
@@ -249,7 +249,7 @@ class Owner implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets person
      *
-     * @param \OptimaBridge\Client\Model\Person|null $person person
+     * @param \OptimaBridge\Model\Person|null $person person
      *
      * @return self
      */

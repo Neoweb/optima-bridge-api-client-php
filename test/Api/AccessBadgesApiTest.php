@@ -4,7 +4,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  OptimaBridge\Client
+ * @package  OptimaBridge
  * @author   Quentin GUERIN (quentin.guerin@neoweb.fr)
  * @link     https://openapi-generator.tech
  */
@@ -26,18 +26,18 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace OptimaBridge\Client\Test\Api;
+namespace OptimaBridge\Test\Api;
 
-use \OptimaBridge\Client\Configuration;
-use \OptimaBridge\Client\ApiException;
-use \OptimaBridge\Client\ObjectSerializer;
+use \OptimaBridge\Configuration;
+use \OptimaBridge\ApiException;
+use \OptimaBridge\ObjectSerializer;
 use PHPUnit\Framework\TestCase;
 
 /**
  * AccessBadgesApiTest Class Doc Comment
  *
  * @category Class
- * @package  OptimaBridge\Client
+ * @package  OptimaBridge
  * @author   Quentin GUERIN (quentin.guerin@neoweb.fr)
  * @link     https://openapi-generator.tech
  */

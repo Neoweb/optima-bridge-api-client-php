@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  OptimaBridge\Client
+ * @package  OptimaBridge
  * @author   Quentin GUERIN (quentin.guerin@neoweb.fr)
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace OptimaBridge\Client\Model;
+namespace OptimaBridge\Model;
 
 use \ArrayAccess;
-use \OptimaBridge\Client\ObjectSerializer;
+use \OptimaBridge\ObjectSerializer;
 
 /**
  * AccessBadge Class Doc Comment
  *
  * @category Class
- * @package  OptimaBridge\Client
+ * @package  OptimaBridge
  * @author   Quentin GUERIN (quentin.guerin@neoweb.fr)
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>
@@ -67,7 +67,7 @@ class AccessBadge implements ModelInterface, ArrayAccess, \JsonSerializable
         'kind' => 'string',
         'make' => 'string',
         'model' => 'string',
-        'owner' => '\OptimaBridge\Client\Model\Owner'
+        'owner' => '\OptimaBridge\Model\Owner'
     ];
 
     /**
@@ -455,7 +455,7 @@ class AccessBadge implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets owner
      *
-     * @return \OptimaBridge\Client\Model\Owner|null
+     * @return \OptimaBridge\Model\Owner|null
      */
     public function getOwner()
     {
@@ -465,7 +465,7 @@ class AccessBadge implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets owner
      *
-     * @param \OptimaBridge\Client\Model\Owner|null $owner owner
+     * @param \OptimaBridge\Model\Owner|null $owner owner
      *
      * @return self
      */

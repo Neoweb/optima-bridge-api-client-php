@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  OptimaBridge\Client
+ * @package  OptimaBridge
  * @author   Quentin GUERIN (quentin.guerin@neoweb.fr)
  * @link     https://openapi-generator.tech
  */
@@ -27,7 +27,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace OptimaBridge\Client\Test\Model;
+namespace OptimaBridge\Test\Model;
 
 use PHPUnit\Framework\TestCase;
 
@@ -36,7 +36,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description Process
- * @package     OptimaBridge\Client
+ * @package     OptimaBridge
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */

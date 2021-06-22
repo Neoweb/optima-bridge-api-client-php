@@ -4,7 +4,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  OptimaBridge\Client
+ * @package  OptimaBridge
  * @author   Quentin GUERIN (quentin.guerin@neoweb.fr)
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OptimaBridge\Client\Api;
+namespace OptimaBridge\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OptimaBridge\Client\ApiException;
-use OptimaBridge\Client\Configuration;
-use OptimaBridge\Client\HeaderSelector;
-use OptimaBridge\Client\ObjectSerializer;
+use OptimaBridge\ApiException;
+use OptimaBridge\Configuration;
+use OptimaBridge\HeaderSelector;
+use OptimaBridge\ObjectSerializer;
 
 /**
  * AccessBadgesApi Class Doc Comment
  *
  * @category Class
- * @package  OptimaBridge\Client
+ * @package  OptimaBridge
  * @author   Quentin GUERIN (quentin.guerin@neoweb.fr)
  * @link     https://openapi-generator.tech
  */
@@ -120,11 +120,11 @@ class AccessBadgesApi
      *
      * Disallow some allowed access badges on Optima-Box
      *
-     * @param  \OptimaBridge\Client\Model\AccessBadge[] $access_badge Access badge objects that must be disallowed on Optima-Box (required)
+     * @param  \OptimaBridge\Model\AccessBadge[] $access_badge Access badge objects that must be disallowed on Optima-Box (required)
      *
-     * @throws \OptimaBridge\Client\ApiException on non-2xx response
+     * @throws \OptimaBridge\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OptimaBridge\Client\Model\Process
+     * @return \OptimaBridge\Model\Process
      */
     public function deleteAccessBadges($access_badge)
     {
@@ -137,11 +137,11 @@ class AccessBadgesApi
      *
      * Disallow some allowed access badges on Optima-Box
      *
-     * @param  \OptimaBridge\Client\Model\AccessBadge[] $access_badge Access badge objects that must be disallowed on Optima-Box (required)
+     * @param  \OptimaBridge\Model\AccessBadge[] $access_badge Access badge objects that must be disallowed on Optima-Box (required)
      *
-     * @throws \OptimaBridge\Client\ApiException on non-2xx response
+     * @throws \OptimaBridge\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OptimaBridge\Client\Model\Process, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OptimaBridge\Model\Process, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteAccessBadgesWithHttpInfo($access_badge)
     {
@@ -177,20 +177,20 @@ class AccessBadgesApi
 
             switch($statusCode) {
                 case 202:
-                    if ('\OptimaBridge\Client\Model\Process' === '\SplFileObject') {
+                    if ('\OptimaBridge\Model\Process' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OptimaBridge\Client\Model\Process', []),
+                        ObjectSerializer::deserialize($content, '\OptimaBridge\Model\Process', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OptimaBridge\Client\Model\Process';
+            $returnType = '\OptimaBridge\Model\Process';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -208,7 +208,7 @@ class AccessBadgesApi
                 case 202:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OptimaBridge\Client\Model\Process',
+                        '\OptimaBridge\Model\Process',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -223,7 +223,7 @@ class AccessBadgesApi
      *
      * Disallow some allowed access badges on Optima-Box
      *
-     * @param  \OptimaBridge\Client\Model\AccessBadge[] $access_badge Access badge objects that must be disallowed on Optima-Box (required)
+     * @param  \OptimaBridge\Model\AccessBadge[] $access_badge Access badge objects that must be disallowed on Optima-Box (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -243,14 +243,14 @@ class AccessBadgesApi
      *
      * Disallow some allowed access badges on Optima-Box
      *
-     * @param  \OptimaBridge\Client\Model\AccessBadge[] $access_badge Access badge objects that must be disallowed on Optima-Box (required)
+     * @param  \OptimaBridge\Model\AccessBadge[] $access_badge Access badge objects that must be disallowed on Optima-Box (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function deleteAccessBadgesAsyncWithHttpInfo($access_badge)
     {
-        $returnType = '\OptimaBridge\Client\Model\Process';
+        $returnType = '\OptimaBridge\Model\Process';
         $request = $this->deleteAccessBadgesRequest($access_badge);
 
         return $this->client
@@ -289,7 +289,7 @@ class AccessBadgesApi
     /**
      * Create request for operation 'deleteAccessBadges'
      *
-     * @param  \OptimaBridge\Client\Model\AccessBadge[] $access_badge Access badge objects that must be disallowed on Optima-Box (required)
+     * @param  \OptimaBridge\Model\AccessBadge[] $access_badge Access badge objects that must be disallowed on Optima-Box (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -382,11 +382,11 @@ class AccessBadgesApi
      *
      * Update some allowed access badges on Optima-Box
      *
-     * @param  \OptimaBridge\Client\Model\AccessBadge[] $access_badge Access badge objects that must be updated on Optima-Box (required)
+     * @param  \OptimaBridge\Model\AccessBadge[] $access_badge Access badge objects that must be updated on Optima-Box (required)
      *
-     * @throws \OptimaBridge\Client\ApiException on non-2xx response
+     * @throws \OptimaBridge\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OptimaBridge\Client\Model\Process
+     * @return \OptimaBridge\Model\Process
      */
     public function patchAccessBadges($access_badge)
     {
@@ -399,11 +399,11 @@ class AccessBadgesApi
      *
      * Update some allowed access badges on Optima-Box
      *
-     * @param  \OptimaBridge\Client\Model\AccessBadge[] $access_badge Access badge objects that must be updated on Optima-Box (required)
+     * @param  \OptimaBridge\Model\AccessBadge[] $access_badge Access badge objects that must be updated on Optima-Box (required)
      *
-     * @throws \OptimaBridge\Client\ApiException on non-2xx response
+     * @throws \OptimaBridge\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OptimaBridge\Client\Model\Process, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OptimaBridge\Model\Process, HTTP status code, HTTP response headers (array of strings)
      */
     public function patchAccessBadgesWithHttpInfo($access_badge)
     {
@@ -439,20 +439,20 @@ class AccessBadgesApi
 
             switch($statusCode) {
                 case 202:
-                    if ('\OptimaBridge\Client\Model\Process' === '\SplFileObject') {
+                    if ('\OptimaBridge\Model\Process' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OptimaBridge\Client\Model\Process', []),
+                        ObjectSerializer::deserialize($content, '\OptimaBridge\Model\Process', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OptimaBridge\Client\Model\Process';
+            $returnType = '\OptimaBridge\Model\Process';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -470,7 +470,7 @@ class AccessBadgesApi
                 case 202:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OptimaBridge\Client\Model\Process',
+                        '\OptimaBridge\Model\Process',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -485,7 +485,7 @@ class AccessBadgesApi
      *
      * Update some allowed access badges on Optima-Box
      *
-     * @param  \OptimaBridge\Client\Model\AccessBadge[] $access_badge Access badge objects that must be updated on Optima-Box (required)
+     * @param  \OptimaBridge\Model\AccessBadge[] $access_badge Access badge objects that must be updated on Optima-Box (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -505,14 +505,14 @@ class AccessBadgesApi
      *
      * Update some allowed access badges on Optima-Box
      *
-     * @param  \OptimaBridge\Client\Model\AccessBadge[] $access_badge Access badge objects that must be updated on Optima-Box (required)
+     * @param  \OptimaBridge\Model\AccessBadge[] $access_badge Access badge objects that must be updated on Optima-Box (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function patchAccessBadgesAsyncWithHttpInfo($access_badge)
     {
-        $returnType = '\OptimaBridge\Client\Model\Process';
+        $returnType = '\OptimaBridge\Model\Process';
         $request = $this->patchAccessBadgesRequest($access_badge);
 
         return $this->client
@@ -551,7 +551,7 @@ class AccessBadgesApi
     /**
      * Create request for operation 'patchAccessBadges'
      *
-     * @param  \OptimaBridge\Client\Model\AccessBadge[] $access_badge Access badge objects that must be updated on Optima-Box (required)
+     * @param  \OptimaBridge\Model\AccessBadge[] $access_badge Access badge objects that must be updated on Optima-Box (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -644,11 +644,11 @@ class AccessBadgesApi
      *
      * Allow some new access badges on Optima-Box
      *
-     * @param  \OptimaBridge\Client\Model\AccessBadge[] $access_badge Access badge objects that need to be allowed on Optima-Box (required)
+     * @param  \OptimaBridge\Model\AccessBadge[] $access_badge Access badge objects that need to be allowed on Optima-Box (required)
      *
-     * @throws \OptimaBridge\Client\ApiException on non-2xx response
+     * @throws \OptimaBridge\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OptimaBridge\Client\Model\Process
+     * @return \OptimaBridge\Model\Process
      */
     public function postAccessBadges($access_badge)
     {
@@ -661,11 +661,11 @@ class AccessBadgesApi
      *
      * Allow some new access badges on Optima-Box
      *
-     * @param  \OptimaBridge\Client\Model\AccessBadge[] $access_badge Access badge objects that need to be allowed on Optima-Box (required)
+     * @param  \OptimaBridge\Model\AccessBadge[] $access_badge Access badge objects that need to be allowed on Optima-Box (required)
      *
-     * @throws \OptimaBridge\Client\ApiException on non-2xx response
+     * @throws \OptimaBridge\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OptimaBridge\Client\Model\Process, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OptimaBridge\Model\Process, HTTP status code, HTTP response headers (array of strings)
      */
     public function postAccessBadgesWithHttpInfo($access_badge)
     {
@@ -701,20 +701,20 @@ class AccessBadgesApi
 
             switch($statusCode) {
                 case 202:
-                    if ('\OptimaBridge\Client\Model\Process' === '\SplFileObject') {
+                    if ('\OptimaBridge\Model\Process' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OptimaBridge\Client\Model\Process', []),
+                        ObjectSerializer::deserialize($content, '\OptimaBridge\Model\Process', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OptimaBridge\Client\Model\Process';
+            $returnType = '\OptimaBridge\Model\Process';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -732,7 +732,7 @@ class AccessBadgesApi
                 case 202:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OptimaBridge\Client\Model\Process',
+                        '\OptimaBridge\Model\Process',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -747,7 +747,7 @@ class AccessBadgesApi
      *
      * Allow some new access badges on Optima-Box
      *
-     * @param  \OptimaBridge\Client\Model\AccessBadge[] $access_badge Access badge objects that need to be allowed on Optima-Box (required)
+     * @param  \OptimaBridge\Model\AccessBadge[] $access_badge Access badge objects that need to be allowed on Optima-Box (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -767,14 +767,14 @@ class AccessBadgesApi
      *
      * Allow some new access badges on Optima-Box
      *
-     * @param  \OptimaBridge\Client\Model\AccessBadge[] $access_badge Access badge objects that need to be allowed on Optima-Box (required)
+     * @param  \OptimaBridge\Model\AccessBadge[] $access_badge Access badge objects that need to be allowed on Optima-Box (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function postAccessBadgesAsyncWithHttpInfo($access_badge)
     {
-        $returnType = '\OptimaBridge\Client\Model\Process';
+        $returnType = '\OptimaBridge\Model\Process';
         $request = $this->postAccessBadgesRequest($access_badge);
 
         return $this->client
@@ -813,7 +813,7 @@ class AccessBadgesApi
     /**
      * Create request for operation 'postAccessBadges'
      *
-     * @param  \OptimaBridge\Client\Model\AccessBadge[] $access_badge Access badge objects that need to be allowed on Optima-Box (required)
+     * @param  \OptimaBridge\Model\AccessBadge[] $access_badge Access badge objects that need to be allowed on Optima-Box (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -906,11 +906,11 @@ class AccessBadgesApi
      *
      * Update some allowed access badges on Optima-Box
      *
-     * @param  \OptimaBridge\Client\Model\AccessBadge[] $access_badge Access badge objects that must be updated on Optima-Box (required)
+     * @param  \OptimaBridge\Model\AccessBadge[] $access_badge Access badge objects that must be updated on Optima-Box (required)
      *
-     * @throws \OptimaBridge\Client\ApiException on non-2xx response
+     * @throws \OptimaBridge\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OptimaBridge\Client\Model\Process
+     * @return \OptimaBridge\Model\Process
      */
     public function putAccessBadges($access_badge)
     {
@@ -923,11 +923,11 @@ class AccessBadgesApi
      *
      * Update some allowed access badges on Optima-Box
      *
-     * @param  \OptimaBridge\Client\Model\AccessBadge[] $access_badge Access badge objects that must be updated on Optima-Box (required)
+     * @param  \OptimaBridge\Model\AccessBadge[] $access_badge Access badge objects that must be updated on Optima-Box (required)
      *
-     * @throws \OptimaBridge\Client\ApiException on non-2xx response
+     * @throws \OptimaBridge\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OptimaBridge\Client\Model\Process, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OptimaBridge\Model\Process, HTTP status code, HTTP response headers (array of strings)
      */
     public function putAccessBadgesWithHttpInfo($access_badge)
     {
@@ -963,20 +963,20 @@ class AccessBadgesApi
 
             switch($statusCode) {
                 case 202:
-                    if ('\OptimaBridge\Client\Model\Process' === '\SplFileObject') {
+                    if ('\OptimaBridge\Model\Process' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OptimaBridge\Client\Model\Process', []),
+                        ObjectSerializer::deserialize($content, '\OptimaBridge\Model\Process', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OptimaBridge\Client\Model\Process';
+            $returnType = '\OptimaBridge\Model\Process';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -994,7 +994,7 @@ class AccessBadgesApi
                 case 202:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OptimaBridge\Client\Model\Process',
+                        '\OptimaBridge\Model\Process',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1009,7 +1009,7 @@ class AccessBadgesApi
      *
      * Update some allowed access badges on Optima-Box
      *
-     * @param  \OptimaBridge\Client\Model\AccessBadge[] $access_badge Access badge objects that must be updated on Optima-Box (required)
+     * @param  \OptimaBridge\Model\AccessBadge[] $access_badge Access badge objects that must be updated on Optima-Box (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1029,14 +1029,14 @@ class AccessBadgesApi
      *
      * Update some allowed access badges on Optima-Box
      *
-     * @param  \OptimaBridge\Client\Model\AccessBadge[] $access_badge Access badge objects that must be updated on Optima-Box (required)
+     * @param  \OptimaBridge\Model\AccessBadge[] $access_badge Access badge objects that must be updated on Optima-Box (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function putAccessBadgesAsyncWithHttpInfo($access_badge)
     {
-        $returnType = '\OptimaBridge\Client\Model\Process';
+        $returnType = '\OptimaBridge\Model\Process';
         $request = $this->putAccessBadgesRequest($access_badge);
 
         return $this->client
@@ -1075,7 +1075,7 @@ class AccessBadgesApi
     /**
      * Create request for operation 'putAccessBadges'
      *
-     * @param  \OptimaBridge\Client\Model\AccessBadge[] $access_badge Access badge objects that must be updated on Optima-Box (required)
+     * @param  \OptimaBridge\Model\AccessBadge[] $access_badge Access badge objects that must be updated on Optima-Box (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

@@ -5,7 +5,7 @@
  * PHP version 7.2
  *
  * @category Class
- * @package  OptimaBridge\Client
+ * @package  OptimaBridge
  * @author   Quentin GUERIN (quentin.guerin@neoweb.fr)
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace OptimaBridge\Client\Model;
+namespace OptimaBridge\Model;
 
 use \ArrayAccess;
-use \OptimaBridge\Client\ObjectSerializer;
+use \OptimaBridge\ObjectSerializer;
 
 /**
  * Company Class Doc Comment
  *
  * @category Class
- * @package  OptimaBridge\Client
+ * @package  OptimaBridge
  * @author   Quentin GUERIN (quentin.guerin@neoweb.fr)
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<TKey, TValue>

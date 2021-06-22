@@ -11,6 +11,6 @@ Name | Type | Description | Notes
 **kind** | **string** |  | [optional]
 **make** | **string** |  | [optional]
 **model** | **string** |  | [optional]
-**owner** | [**\OptimaBridge\Client\Model\Owner**](Owner.md) |  | [optional]
+**owner** | [**\OptimaBridge\Model\Owner**](Owner.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

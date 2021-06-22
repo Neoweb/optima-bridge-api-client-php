@@ -49,12 +49,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OptimaBridge\Client\Api\AccessBadgesApi(
+$apiInstance = new OptimaBridge\Api\AccessBadgesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$access_badge = array(new \OptimaBridge\Client\Model\AccessBadge()); // \OptimaBridge\Client\Model\AccessBadge[] | Access badge objects that must be disallowed on Optima-Box
+$access_badge = array(new \OptimaBridge\Model\AccessBadge()); // \OptimaBridge\Model\AccessBadge[] | Access badge objects that must be disallowed on Optima-Box
 
 try {
     $result = $apiInstance->deleteAccessBadges($access_badge);
